@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="QUANTUM ENERGY — профессиональные услуги в сфере высоких технологий. Глобальное посредничество, поставки авиакосмических компонентов, интеллектуальные системы.">
+    <meta name="keywords" content="квантовая энергия, высокие технологии, авиакосмические компоненты, интеллектуальные системы, глобальное посредничество">
+    <meta name="author" content="QUANTUM ENERGY">
+    <title>QUANTUM ENERGY | Профессиональные услуги в сфере высоких технологий</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text" data-i18n="site_name">QUANTUM ENERGY</span>
+                    <span class="logo-sub" data-i18n="site_sub">Quantum Zenith Star</span>
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active" data-i18n="nav_home">Главная</a></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle nav-link" id="servicesDropdownBtn">
+                            <span data-i18n="nav_services">Услуги</span>
+                            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" id="servicesDropdown">
+                            <li><a href="services.html" data-i18n="services_all">Все услуги</a></li>
+                            <li><a href="sales.html" data-i18n="services_sales">Агентство продаж</a></li>
+                            <li><a href="procurement.html" data-i18n="services_procurement">Закупки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#products" class="nav-link" data-i18n="nav_products">Продукция</a></li>
+                    <li><a href="#future" class="nav-link" data-i18n="nav_future">Технологии</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+                </ul>
+                
+                <div class="header-actions">
+                    <button class="lang-switch" data-lang="ru">RU</button>
+                    <button class="lang-switch" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-dot"></span>
+                            <span data-i18n="hero_badge">КВАНТОВЫЕ ТЕХНОЛОГИИ</span>
+                        </div>
+                        <h1 class="hero-title" data-i18n="hero_title">Профессиональные услуги<br><span class="gradient-text">в сфере высоких технологий</span></h1>
+                        <p class="hero-description" data-i18n="hero_desc">Quantum Energy — это платформа, объединяющая передовые технологии и профессиональные услуги для бизнеса. Мы создаем эффективные решения для глобального рынка.</p>
+                        <div class="hero-buttons">
+                            <a href="services.html" class="btn btn-primary" data-i18n="hero_btn_services">Наши услуги</a>
+                            <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_contact">Связаться</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">300+</div>
+                                <div class="stat-label" data-i18n="stat_clients">Клиентов</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5B+</div>
+                                <div class="stat-label" data-i18n="stat_turnover">Торговый оборот</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">30+</div>
+                                <div class="stat-label" data-i18n="stat_countries">Стран</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="quantum-sphere">
+                            <div class="sphere-core"></div>
+                            <div class="sphere-ring"></div>
+                            <div class="sphere-ring ring-2"></div>
+                            <div class="sphere-ring ring-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="about_tag">О компании</span>
+                    <h2 class="section-title" data-i18n="about_title">QUANTUM ENERGY<br><span class="gradient-text">с 2018 года</span></h2>
+                    <p class="section-subtitle" data-i18n="about_subtitle">Мы объединяем передовые технологии и профессиональные услуги для бизнеса</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <img src="assets/images/digital-service.svg" alt="Digital Service" class="card-icon-img">
+                        <h3 data-i18n="about_card1_title">Глобальное посредничество</h3>
+                        <p data-i18n="about_card1_desc">Цифровая платформа с искусственным интеллектом для международной торговли, поддерживающая сделки на миллиарды рублей.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon-emoji">🤝</div>
+                        <h3 data-i18n="about_card2_title">Высококачественные услуги</h3>
+                        <p data-i18n="about_card2_desc">Предоставляем услуги высокого качества сотням клиентов по всему миру, строим долгосрочные отношения.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon-emoji">⚙️</div>
+                        <h3 data-i18n="about_card3_title">Мультимодульная интеграция</h3>
+                        <p data-i18n="about_card3_desc">Объединяем ресурсы в области новых материалов, авиакосмической отрасли и высокотехнологичного оборудования.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="products_tag">Продуктовые линии</span>
+                    <h2 class="section-title" data-i18n="products_title">Высокотехнологичные решения<br><span class="gradient-text">для ключевых отраслей</span></h2>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-icon-emoji">🧪</div>
+                        <h3 data-i18n="product1_title">Новые материалы</h3>
+                        <p data-i18n="product1_desc">Системный подход к рынку, формирование ключевой агентской сети.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon-emoji">🚀</div>
+                        <h3 data-i18n="product2_title">Авиакосмические компоненты</h3>
+                        <p data-i18n="product2_desc">Поставка компонентов для авиакосмической отрасли.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon-emoji">📊</div>
+                        <h3 data-i18n="product3_title">Интеллектуальные системы</h3>
+                        <p data-i18n="product3_desc">Разработка и внедрение систем智能 управления и контроля.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon-emoji">⚡</div>
+                        <h3 data-i18n="product4_title">Высокотехнологичное оборудование</h3>
+                        <p data-i18n="product4_desc">Стабильные каналы поставок и экспортные решения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Section -->
+        <section id="future" class="future">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="future_tag">Перспективные направления</span>
+                    <h2 class="section-title" data-i18n="future_title">Технологии будущего<br><span class="gradient-text">сегодня</span></h2>
+                </div>
+                <div class="future-grid">
+                    <div class="future-card">
+                        <div class="future-number">01</div>
+                        <h3 data-i18n="future1_title">Авиакосмическая отрасль</h3>
+                        <p data-i18n="future1_desc">Поставка компонентов для авиакосмической отрасли, развитие направления智能 управления.</p>
+                    </div>
+                    <div class="future-card">
+                        <div class="future-number">02</div>
+                        <h3 data-i18n="future2_title">Экосистема данных</h3>
+                        <p data-i18n="future2_desc">Управление данными как ключевая компетенция. Данные как алгоритм, алгоритм как сервис.</p>
+                    </div>
+                    <div class="future-card">
+                        <div class="future-number">03</div>
+                        <h3 data-i18n="future3_title">Высокотехнологичное оборудование</h3>
+                        <p data-i18n="future3_desc">Стабильная ценовая политика и каналы сбыта, прорыв в области агентских продаж.</p>
+                    </div>
+                    <div class="future-card">
+                        <div class="future-number">04</div>
+                        <h3 data-i18n="future4_title">Интеллектуальное управление</h3>
+                        <p data-i18n="future4_desc">Глубокое проникновение в производственные цепочки.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="partners_tag">Партнеры</span>
+                    <h2 class="section-title" data-i18n="partners_title">Глобальная сеть сотрудничества</h2>
+                </div>
+                <div class="partners-grid">
+                    <div class="partner-item" data-i18n="partner1">Производители</div>
+                    <div class="partner-item" data-i18n="partner2">Глобальные покупатели</div>
+                    <div class="partner-item" data-i18n="partner3">Партнерские организации</div>
+                    <div class="partner-item" data-i18n="partner4">Программа партнерства</div>
+                </div>
+                <div class="partner-stats">
+                    <div class="partner-stat">
+                        <div class="stat-number">300+</div>
+                        <div class="stat-label" data-i18n="partner_clients">Обслужено клиентов</div>
+                    </div>
+                    <div class="partner-stat">
+                        <div class="stat-number">5B+</div>
+                        <div class="stat-label" data-i18n="partner_turnover">Объем торговли</div>
+                    </div>
+                    <div class="partner-stat">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label" data-i18n="partner_countries">Стран присутствия</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <span class="section-tag" data-i18n="contact_tag">Свяжитесь с нами</span>
+                        <h2 class="contact-title" data-i18n="contact_title">Присоединяйтесь к глобальной сети<br><span class="gradient-text">партнеров QUANTUM ENERGY</span></h2>
+                        <p class="contact-description" data-i18n="contact_desc">Вместе к эффективной и безопасной международной торговле</p>
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <div class="detail-icon">📞</div>
+                                <div>
+                                    <strong data-i18n="contact_phone">Телефон</strong>
+                                    <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <div class="detail-icon">✉️</div>
+                                <div>
+                                    <strong data-i18n="contact_email">Email</strong>
+                                    <a href="mailto:info@quantumenergy.com">info@quantumenergy.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" data-i18n-placeholder="contact_name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" data-i18n-placeholder="contact_email_placeholder" placeholder="Email адрес" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="company" name="company" data-i18n-placeholder="contact_company" placeholder="Компания">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="4" data-i18n-placeholder="contact_message" placeholder="Сообщение" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full" data-i18n="contact_submit">Отправить</button>
+                            <div id="formResponse" class="form-response"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span data-i18n="site_name">QUANTUM ENERGY</span>
+                        <small data-i18n="site_sub">Quantum Zenith Star</small>
+                    </div>
+                    <p class="copyright" data-i18n="footer_copyright">© 2025 QUANTUM ENERGY. Все права защищены.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer_nav">Навигация</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                        <li><a href="sales.html" data-i18n="services_sales">Агентство продаж</a></li>
+                        <li><a href="procurement.html" data-i18n="services_procurement">Закупки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4 data-i18n="footer_info">Информация</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">Политика конфиденциальности</a></li>
+                        <li><a href="#" data-i18n="footer_terms">Условия использования</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

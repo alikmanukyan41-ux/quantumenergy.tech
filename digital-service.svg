@@ -1,0 +1,253 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f1a"/>
+      <stop offset="50%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a14"/>
+    </linearGradient>
+    <!-- 紫色渐变 -->
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+    <!-- 青色渐变 -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.8"/>
+    </linearGradient>
+    <!-- 光晕 -->
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 节点光晕 -->
+    <filter id="nodeGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lineGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 动画 -->
+    <style>
+      .pulse { animation: pulse 3s ease-in-out infinite; }
+      .pulse2 { animation: pulse 3s ease-in-out infinite 1s; }
+      .pulse3 { animation: pulse 3s ease-in-out infinite 2s; }
+      .flow { animation: flow 4s linear infinite; }
+      .flow2 { animation: flow 4s linear infinite 1.3s; }
+      .flow3 { animation: flow 4s linear infinite 2.6s; }
+      .rotate { animation: rotate 20s linear infinite; transform-origin: 300px 250px; }
+      .blink { animation: blink 2s ease-in-out infinite; }
+      .blink2 { animation: blink 2s ease-in-out infinite 0.7s; }
+      .blink3 { animation: blink 2s ease-in-out infinite 1.4s; }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.15); }
+      }
+      @keyframes flow {
+        0% { stroke-dashoffset: 200; opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0; }
+      }
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="600" height="500" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- 背景光晕 -->
+  <ellipse cx="200" cy="200" rx="180" ry="160" fill="url(#glow1)"/>
+  <ellipse cx="420" cy="320" rx="160" ry="140" fill="url(#glow2)"/>
+
+  <!-- 网格线（电路板风格） -->
+  <g stroke="#7c3aed" stroke-width="0.4" opacity="0.15">
+    <!-- 横线 -->
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="0" y1="360" x2="600" y2="360"/>
+    <line x1="0" y1="420" x2="600" y2="420"/>
+    <!-- 竖线 -->
+    <line x1="60" y1="0" x2="60" y2="500"/>
+    <line x1="120" y1="0" x2="120" y2="500"/>
+    <line x1="180" y1="0" x2="180" y2="500"/>
+    <line x1="240" y1="0" x2="240" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="360" y1="0" x2="360" y2="500"/>
+    <line x1="420" y1="0" x2="420" y2="500"/>
+    <line x1="480" y1="0" x2="480" y2="500"/>
+    <line x1="540" y1="0" x2="540" y2="500"/>
+  </g>
+
+  <!-- 电路连接线（主干道） -->
+  <g filter="url(#lineGlow)">
+    <!-- 水平主线 -->
+    <line x1="60" y1="180" x2="540" y2="180" stroke="#7c3aed" stroke-width="1.5" opacity="0.5"/>
+    <line x1="60" y1="320" x2="540" y2="320" stroke="#06b6d4" stroke-width="1.5" opacity="0.5"/>
+    <!-- 垂直主线 -->
+    <line x1="180" y1="60" x2="180" y2="440" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+    <line x1="420" y1="60" x2="420" y2="440" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+    <!-- 斜线连接 -->
+    <line x1="180" y1="180" x2="300" y2="250" stroke="url(#purpleGrad)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="420" y1="180" x2="300" y2="250" stroke="url(#purpleGrad)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="180" y1="320" x2="300" y2="250" stroke="url(#cyanGrad)" stroke-width="1.5" opacity="0.6"/>
+    <line x1="420" y1="320" x2="300" y2="250" stroke="url(#cyanGrad)" stroke-width="1.5" opacity="0.6"/>
+    <!-- 外围连接 -->
+    <line x1="60" y1="120" x2="180" y2="180" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
+    <line x1="540" y1="120" x2="420" y2="180" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+    <line x1="60" y1="380" x2="180" y2="320" stroke="#7c3aed" stroke-width="1" opacity="0.4"/>
+    <line x1="540" y1="380" x2="420" y2="320" stroke="#06b6d4" stroke-width="1" opacity="0.4"/>
+    <line x1="300" y1="60" x2="300" y2="250" stroke="url(#purpleGrad)" stroke-width="1.5" opacity="0.5"/>
+    <line x1="300" y1="250" x2="300" y2="440" stroke="url(#cyanGrad)" stroke-width="1.5" opacity="0.5"/>
+  </g>
+
+  <!-- 数据流动画 -->
+  <g>
+    <line x1="60" y1="180" x2="540" y2="180" stroke="#a78bfa" stroke-width="2.5"
+          stroke-dasharray="20 180" opacity="0.8" class="flow"/>
+    <line x1="60" y1="320" x2="540" y2="320" stroke="#22d3ee" stroke-width="2.5"
+          stroke-dasharray="20 180" opacity="0.8" class="flow2"/>
+    <line x1="300" y1="60" x2="300" y2="440" stroke="#a78bfa" stroke-width="2.5"
+          stroke-dasharray="20 180" opacity="0.7" class="flow3"/>
+  </g>
+
+  <!-- 旋转外环（中心节点装饰） -->
+  <circle cx="300" cy="250" r="70" fill="none" stroke="url(#purpleGrad)" stroke-width="1"
+          stroke-dasharray="8 6" opacity="0.5" class="rotate"/>
+  <circle cx="300" cy="250" r="88" fill="none" stroke="#06b6d4" stroke-width="0.8"
+          stroke-dasharray="4 10" opacity="0.3"
+          style="animation: rotate 30s linear infinite reverse; transform-origin: 300px 250px;"/>
+
+  <!-- 中心主节点 -->
+  <circle cx="300" cy="250" r="52" fill="#0f0f1a" stroke="url(#purpleGrad)" stroke-width="2"/>
+  <circle cx="300" cy="250" r="42" fill="url(#glow1)" class="pulse"/>
+  <!-- 中心图标：六边形 + 电路符号 -->
+  <polygon points="300,218 326,234 326,266 300,282 274,266 274,234"
+           fill="none" stroke="url(#purpleGrad)" stroke-width="2"/>
+  <!-- 闪电符号 -->
+  <path d="M305,227 L293,252 L303,252 L295,273 L313,245 L302,245 Z"
+        fill="url(#purpleGrad)" opacity="0.9"/>
+
+  <!-- 四角节点 -->
+  <!-- 左上：云计算 -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="180" cy="180" r="28" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2" class="pulse"/>
+    <circle cx="180" cy="180" r="20" fill="#7c3aed" opacity="0.15"/>
+    <!-- 云图标 -->
+    <path d="M168,183 a7,7 0 0 1 0-14 a5,5 0 0 1 9-3 a6,6 0 0 1 11,3 a5,5 0 0 1 0,10 Z"
+          fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linejoin="round"/>
+    <line x1="174" y1="183" x2="174" y2="188" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="180" y1="183" x2="180" y2="190" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="186" y1="183" x2="186" y2="188" stroke="#a78bfa" stroke-width="1.5"/>
+  </g>
+
+  <!-- 右上：AI芯片 -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="420" cy="180" r="28" fill="#1a1a2e" stroke="#06b6d4" stroke-width="2" class="pulse2"/>
+    <circle cx="420" cy="180" r="20" fill="#06b6d4" opacity="0.15"/>
+    <!-- 芯片图标 -->
+    <rect x="410" y="170" width="20" height="20" fill="none" stroke="#22d3ee" stroke-width="1.5" rx="2"/>
+    <rect x="414" y="174" width="12" height="12" fill="#22d3ee" opacity="0.3" rx="1"/>
+    <line x1="410" y1="174" x2="405" y2="174" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="410" y1="180" x2="405" y2="180" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="410" y1="186" x2="405" y2="186" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="430" y1="174" x2="435" y2="174" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="430" y1="180" x2="435" y2="180" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="430" y1="186" x2="435" y2="186" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="414" y1="170" x2="414" y2="165" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="420" y1="170" x2="420" y2="165" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="426" y1="170" x2="426" y2="165" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="414" y1="190" x2="414" y2="195" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="420" y1="190" x2="420" y2="195" stroke="#22d3ee" stroke-width="1.2"/>
+    <line x1="426" y1="190" x2="426" y2="195" stroke="#22d3ee" stroke-width="1.2"/>
+  </g>
+
+  <!-- 左下：数据库 -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="180" cy="320" r="28" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2" class="pulse3"/>
+    <circle cx="180" cy="320" r="20" fill="#7c3aed" opacity="0.15"/>
+    <!-- 数据库图标 -->
+    <ellipse cx="180" cy="311" rx="10" ry="4" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="170" y1="311" x2="170" y2="323" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="190" y1="311" x2="190" y2="323" stroke="#a78bfa" stroke-width="1.5"/>
+    <ellipse cx="180" cy="323" rx="10" ry="4" fill="none" stroke="#a78bfa" stroke-width="1.5"/>
+    <ellipse cx="180" cy="317" rx="10" ry="4" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- 右下：网络互联 -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="420" cy="320" r="28" fill="#1a1a2e" stroke="#06b6d4" stroke-width="2" class="pulse"/>
+    <circle cx="420" cy="320" r="20" fill="#06b6d4" opacity="0.15"/>
+    <!-- 地球/网络图标 -->
+    <circle cx="420" cy="320" r="11" fill="none" stroke="#22d3ee" stroke-width="1.5"/>
+    <ellipse cx="420" cy="320" rx="6" ry="11" fill="none" stroke="#22d3ee" stroke-width="1"/>
+    <line x1="409" y1="320" x2="431" y2="320" stroke="#22d3ee" stroke-width="1"/>
+    <line x1="411" y1="314" x2="429" y2="314" stroke="#22d3ee" stroke-width="0.8" opacity="0.6"/>
+    <line x1="411" y1="326" x2="429" y2="326" stroke="#22d3ee" stroke-width="0.8" opacity="0.6"/>
+  </g>
+
+  <!-- 顶部节点：能源/闪电 -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="300" cy="90" r="22" fill="#1a1a2e" stroke="url(#purpleGrad)" stroke-width="2" class="pulse2"/>
+    <path d="M304,79 L295,93 L302,93 L296,106 L310,88 L303,88 Z" fill="url(#purpleGrad)" opacity="0.9"/>
+  </g>
+
+  <!-- 底部节点：分析图表 -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="300" cy="410" r="22" fill="#1a1a2e" stroke="url(#cyanGrad)" stroke-width="2" class="pulse3"/>
+    <!-- 柱状图 -->
+    <rect x="289" y="402" width="5" height="12" fill="#06b6d4" opacity="0.8" rx="1"/>
+    <rect x="297" y="397" width="5" height="17" fill="#7c3aed" opacity="0.8" rx="1"/>
+    <rect x="305" y="405" width="5" height="9" fill="#06b6d4" opacity="0.8" rx="1"/>
+    <line x1="287" y1="414" x2="313" y2="414" stroke="#22d3ee" stroke-width="1"/>
+  </g>
+
+  <!-- 左侧小节点 -->
+  <circle cx="60" cy="120" r="7" fill="#7c3aed" opacity="0.7" class="blink"/>
+  <circle cx="60" cy="180" r="5" fill="#a78bfa" opacity="0.6" class="blink2"/>
+  <circle cx="60" cy="320" r="5" fill="#a78bfa" opacity="0.6" class="blink3"/>
+  <circle cx="60" cy="380" r="7" fill="#7c3aed" opacity="0.7" class="blink2"/>
+
+  <!-- 右侧小节点 -->
+  <circle cx="540" cy="120" r="7" fill="#06b6d4" opacity="0.7" class="blink3"/>
+  <circle cx="540" cy="180" r="5" fill="#22d3ee" opacity="0.6" class="blink"/>
+  <circle cx="540" cy="320" r="5" fill="#22d3ee" opacity="0.6" class="blink2"/>
+  <circle cx="540" cy="380" r="7" fill="#06b6d4" opacity="0.7" class="blink"/>
+
+  <!-- 散点装饰 -->
+  <circle cx="120" cy="90" r="2" fill="#7c3aed" opacity="0.5" class="blink"/>
+  <circle cx="480" cy="90" r="2" fill="#06b6d4" opacity="0.5" class="blink2"/>
+  <circle cx="90" cy="250" r="2" fill="#a78bfa" opacity="0.4" class="blink3"/>
+  <circle cx="510" cy="250" r="2" fill="#22d3ee" opacity="0.4" class="blink"/>
+  <circle cx="120" cy="410" r="2" fill="#7c3aed" opacity="0.5" class="blink2"/>
+  <circle cx="480" cy="410" r="2" fill="#06b6d4" opacity="0.5" class="blink3"/>
+  <circle cx="240" cy="90" r="2" fill="#a78bfa" opacity="0.3" class="blink2"/>
+  <circle cx="360" cy="90" r="2" fill="#22d3ee" opacity="0.3" class="blink3"/>
+  <circle cx="240" cy="410" r="2" fill="#a78bfa" opacity="0.3" class="blink"/>
+  <circle cx="360" cy="410" r="2" fill="#22d3ee" opacity="0.3" class="blink2"/>
+
+  <!-- 文字标签 -->
+  <text x="180" y="218" text-anchor="middle" fill="#a78bfa" font-size="9" font-family="Arial, sans-serif" opacity="0.8">云计算</text>
+  <text x="420" y="218" text-anchor="middle" fill="#22d3ee" font-size="9" font-family="Arial, sans-serif" opacity="0.8">AI 驱动</text>
+  <text x="180" y="358" text-anchor="middle" fill="#a78bfa" font-size="9" font-family="Arial, sans-serif" opacity="0.8">大数据</text>
+  <text x="420" y="358" text-anchor="middle" fill="#22d3ee" font-size="9" font-family="Arial, sans-serif" opacity="0.8">全球互联</text>
+  <text x="300" y="66" text-anchor="middle" fill="#c4b5fd" font-size="9" font-family="Arial, sans-serif" opacity="0.8">清洁能源</text>
+  <text x="300" y="446" text-anchor="middle" fill="#67e8f9" font-size="9" font-family="Arial, sans-serif" opacity="0.8">数据分析</text>
+</svg>

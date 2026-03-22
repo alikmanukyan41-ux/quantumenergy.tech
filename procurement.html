@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Закупки QUANTUM ENERGY — высококачественные услуги для глобальных покупателей, верификация поставщиков, логистическая поддержка.">
+    <title>Закупки | QUANTUM ENERGY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text" data-i18n="site_name">QUANTUM ENERGY</span>
+                    <span class="logo-sub" data-i18n="site_sub">Quantum Zenith Star</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Главная</a></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle nav-link active" id="servicesDropdownBtn">
+                            <span data-i18n="nav_services">Услуги</span>
+                            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.2"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" id="servicesDropdown">
+                            <li><a href="services.html" data-i18n="services_all">Все услуги</a></li>
+                            <li><a href="sales.html" data-i18n="services_sales">Агентство продаж</a></li>
+                            <li><a href="procurement.html" data-i18n="services_procurement">Закупки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#products" class="nav-link" data-i18n="nav_products">Продукция</a></li>
+                    <li><a href="index.html#future" class="nav-link" data-i18n="nav_future">Технологии</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="lang-switch" data-lang="ru">RU</button>
+                    <button class="lang-switch" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero procurement-hero">
+            <div class="page-hero-bg" style="background-image: url('assets/images/photo-1522071820081-009f0129c71c.avif');"></div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span data-i18n="procurement_page_title">Закупки</span>
+                    </div>
+                    <h1 class="hero-title" data-i18n="procurement_page_subtitle">Высококачественные услуги<br><span class="gradient-text">для глобальных покупателей</span></h1>
+                    <p class="hero-description" data-i18n="procurement_page_desc">Обслуживаем покупателей и дистрибьюторов по всему миру, создаем надежные каналы поставок</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="procurement-content">
+            <div class="container">
+                <div class="procurement-grid">
+                    <div class="procurement-card">
+                        <div class="procurement-icon-emoji">🔍</div>
+                        <h3 data-i18n="procurement_card1_title">Верификация поставщиков</h3>
+                        <p data-i18n="procurement_card1_desc">Строгий отбор и проверка поставщиков для обеспечения надежности и качества.</p>
+                    </div>
+                    <div class="procurement-card">
+                        <div class="procurement-icon-emoji">📋</div>
+                        <h3 data-i18n="procurement_card2_title">Соблюдение норм</h3>
+                        <p data-i18n="procurement_card2_desc">Стабильные каналы поставок с полным соблюдением экспортных норм.</p>
+                    </div>
+                    <div class="procurement-card">
+                        <div class="procurement-icon-emoji">🚚</div>
+                        <h3 data-i18n="procurement_card3_title">Логистическая поддержка</h3>
+                        <p data-i18n="procurement_card3_desc">Профессиональная логистика для своевременной доставки грузов.</p>
+                    </div>
+                </div>
+
+                <div class="procurement-benefits">
+                    <div class="section-header">
+                        <h2 class="section-title" data-i18n="procurement_benefits_title">Почему выбирают нас</h2>
+                    </div>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-number">01</div>
+                            <div>
+                                <h3 data-i18n="procurement_benefit1_title">Цифровая платформа</h3>
+                                <p data-i18n="procurement_benefit1_desc">Полностью цифровая платформа с прозрачными процессами</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-number">02</div>
+                            <div>
+                                <h3 data-i18n="procurement_benefit2_title">Ориентация на результат</h3>
+                                <p data-i18n="procurement_benefit2_desc">Фокус на измеримых результатах и выгоде клиента</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-number">03</div>
+                            <div>
+                                <h3 data-i18n="procurement_benefit3_title">Комиссионная модель</h3>
+                                <p data-i18n="procurement_benefit3_desc">Комиссия только после успешного завершения сделки</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-number">04</div>
+                            <div>
+                                <h3 data-i18n="procurement_benefit4_title">Глобальная сеть</h3>
+                                <p data-i18n="procurement_benefit4_desc">Работа с покупателями из 30+ стран мира</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <h2 data-i18n="procurement_cta_title">Нужна помощь с закупками?</h2>
+                    <p data-i18n="procurement_cta_desc">Свяжитесь с нами, и мы поможем найти надежных поставщиков</p>
+                    <a href="index.html#contact" class="btn btn-primary" data-i18n="procurement_cta_btn">Оставить заявку</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span data-i18n="site_name">QUANTUM ENERGY</span>
+                        <small data-i18n="site_sub">Quantum Zenith Star</small>
+                    </div>
+                    <p class="copyright" data-i18n="footer_copyright">© 2025 QUANTUM ENERGY. Все права защищены.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer_nav">Навигация</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                        <li><a href="sales.html" data-i18n="services_sales">Агентство продаж</a></li>
+                        <li><a href="procurement.html" data-i18n="services_procurement">Закупки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4 data-i18n="footer_info">Информация</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">Политика конфиденциальности</a></li>
+                        <li><a href="#" data-i18n="footer_terms">Условия использования</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

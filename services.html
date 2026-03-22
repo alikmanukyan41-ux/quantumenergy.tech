@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Услуги QUANTUM ENERGY — глобальное посредничество, поставки высокотехнологичного оборудования, авиакосмических компонентов и интеллектуальных систем.">
+    <title>Услуги | QUANTUM ENERGY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <span class="logo-text" data-i18n="site_name">QUANTUM ENERGY</span>
+                    <span class="logo-sub" data-i18n="site_sub">Quantum Zenith Star</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Главная</a></li>
+                    <li class="dropdown">
+                        <button class="dropdown-toggle nav-link active" id="servicesDropdownBtn">
+                            <span data-i18n="nav_services">Услуги</span>
+                            <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.2"/>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu" id="servicesDropdown">
+                            <li><a href="services.html" data-i18n="services_all">Все услуги</a></li>
+                            <li><a href="sales.html" data-i18n="services_sales">Агентство продаж</a></li>
+                            <li><a href="procurement.html" data-i18n="services_procurement">Закупки</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#products" class="nav-link" data-i18n="nav_products">Продукция</a></li>
+                    <li><a href="index.html#future" class="nav-link" data-i18n="nav_future">Технологии</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav_contact">Контакты</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="lang-switch" data-lang="ru">RU</button>
+                    <button class="lang-switch" data-lang="en">EN</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-bg" style="background-image: url('assets/images/photo-1551522435-a13afa10f103.avif');"></div>
+            <div class="container">
+                <div class="page-hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span data-i18n="services_page_title">Наши услуги</span>
+                    </div>
+                    <h1 class="hero-title" data-i18n="services_page_subtitle">Создаем эффективную, безопасную и надежную<br><span class="gradient-text">экосистему для производителей и покупателей</span></h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-page">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="products_tag">Продуктовые линии</h2>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="assets/images/digital-service.svg" alt="Digital Service" class="product-icon-img">
+                        <h3 data-i18n="product1_title">Новые материалы</h3>
+                        <p data-i18n="product1_desc">Системный подход к рынку, формирование ключевой агентской сети.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon-emoji">🚀</div>
+                        <h3 data-i18n="product2_title">Авиакосмические компоненты</h3>
+                        <p data-i18n="product2_desc">Поставка компонентов для авиакосмической отрасли.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon-emoji">📊</div>
+                        <h3 data-i18n="product3_title">Интеллектуальные системы</h3>
+                        <p data-i18n="product3_desc">Разработка и внедрение систем智能 управления и контроля.</p>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-icon-emoji">⚡</div>
+                        <h3 data-i18n="product4_title">Высокотехнологичное оборудование</h3>
+                        <p data-i18n="product4_desc">Стабильные каналы поставок и экспортные решения.</p>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 80px;">
+                    <h2 class="section-title" data-i18n="services_features_title">Ключевые особенности</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-emoji">🤝</div>
+                        <h3 data-i18n="services_feature1_title">Социальная ответственность</h3>
+                        <p data-i18n="services_feature1_desc">Приоритет общественных интересов и вклад в социальные проекты</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-emoji">🎯</div>
+                        <h3 data-i18n="services_feature2_title">Ориентация на результат</h3>
+                        <p data-i18n="services_feature2_desc">Фокус на измеримых результатах и выгоде клиента</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-emoji">💰</div>
+                        <h3 data-i18n="services_feature3_title">Комиссионная модель</h3>
+                        <p data-i18n="services_feature3_desc">Комиссия только после успешного завершения сделки</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-emoji">🔍</div>
+                        <h3 data-i18n="services_feature4_title">Прозрачность</h3>
+                        <p data-i18n="services_feature4_desc">Полностью цифровая платформа с отслеживанием каждого этапа</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-emoji">📈</div>
+                        <h3 data-i18n="services_feature5_title">Постоянное развитие</h3>
+                        <p data-i18n="services_feature5_desc">Непрерывное улучшение сервисов для повышения ценности</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon-emoji">🌱</div>
+                        <h3 data-i18n="services_feature6_title">Экологичность</h3>
+                        <p data-i18n="services_feature6_desc">Экологически ответственные практики и решения</p>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 80px;">
+                    <h2 class="section-title" data-i18n="services_plan_title">Глобальная партнерская программа</h2>
+                </div>
+                <div class="plan-steps">
+                    <div class="plan-step">
+                        <div class="step-number">1</div>
+                        <h3 data-i18n="services_plan_step1">Структурированный доступ</h3>
+                        <p data-i18n="services_plan_step1_desc">Стандартизированные правила и цифровая поддержка</p>
+                    </div>
+                    <div class="plan-step">
+                        <div class="step-number">2</div>
+                        <h3 data-i18n="services_plan_step2">Многоуровневое взаимодействие</h3>
+                        <p data-i18n="services_plan_step2_desc">Четкое разделение ролей агентов и партнеров</p>
+                    </div>
+                    <div class="plan-step">
+                        <div class="step-number">3</div>
+                        <h3 data-i18n="services_plan_step3">Долгосрочное сотрудничество</h3>
+                        <p data-i18n="services_plan_step3_desc">Стабильные механизмы сотрудничества и участия</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-cta">
+            <div class="container">
+                <div class="cta-wrapper">
+                    <h2 data-i18n="contact_title">Присоединяйтесь к глобальной сети<br>партнеров QUANTUM ENERGY</h2>
+                    <p data-i18n="contact_desc">Вместе к эффективной и безопасной международной торговле</p>
+                    <a href="index.html#contact" class="btn btn-primary" data-i18n="hero_btn_contact">Связаться</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span data-i18n="site_name">QUANTUM ENERGY</span>
+                        <small data-i18n="site_sub">Quantum Zenith Star</small>
+                    </div>
+                    <p class="copyright" data-i18n="footer_copyright">© 2025 QUANTUM ENERGY. Все права защищены.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4 data-i18n="footer_nav">Навигация</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="nav_home">Главная</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Услуги</a></li>
+                        <li><a href="sales.html" data-i18n="services_sales">Агентство продаж</a></li>
+                        <li><a href="procurement.html" data-i18n="services_procurement">Закупки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4 data-i18n="footer_info">Информация</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_privacy">Политика конфиденциальности</a></li>
+                        <li><a href="#" data-i18n="footer_terms">Условия использования</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
